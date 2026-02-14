@@ -1,0 +1,143 @@
+/* Variables de color para fácil personalización */
+:root {
+    --color-fondo: #fff5f5;
+    --color-primario: #d63384;
+    --color-texto: #4a4a4a;
+    --color-acento: #ff85a2;
+    --blanco: #ffffff;
+}
+
+body {
+    background-color: var(--color-fondo);
+    font-family: 'Lora', serif;
+    color: var(--color-texto);
+    margin: 0;
+    padding: 0;
+    line-height: 1.8;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header {
+    text-align: center;
+    padding: 60px 20px 20px 20px;
+    width: 100%;
+}
+
+h1 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 4rem;
+    color: var(--color-primario);
+    margin: 0;
+}
+
+.corazon {
+    color: var(--color-primario);
+    font-size: 2.5rem;
+    animation: latido 1.2s infinite;
+    display: inline-block;
+    margin-top: 10px;
+}
+
+/* Animación del corazón */
+@keyframes latido {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+    100% { transform: scale(1); }
+}
+
+/* Estilos del Reproductor */
+.reproductor-container {
+    background: var(--blanco);
+    padding: 25px;
+    border-radius: 50px;
+    box-shadow: 0 10px 30px rgba(214, 51, 132, 0.15);
+    margin: 20px 0 40px 0;
+    width: 85%;
+    max-width: 450px;
+    text-align: center;
+}
+
+.reproductor-container p {
+    margin: 0 0 15px 0;
+    font-size: 1rem;
+    color: var(--color-primario);
+    font-weight: bold;
+}
+
+audio {
+    width: 100%;
+    filter: sepia(20%) saturate(70%) hue-rotate(300deg);
+}
+
+/* Estilos de la Carta */
+.carta {
+    max-width: 750px;
+    background: var(--blanco);
+    padding: 50px;
+    margin: 0 20px 40px 20px;
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.05);
+    border-top: 8px solid var(--color-acento);
+}
+
+h2 {
+    color: var(--color-primario);
+    font-family: 'Dancing Script', cursive;
+    font-size: 2.4rem;
+    margin-top: 40px;
+    border-bottom: 1px dashed var(--color-acento);
+    display: inline-block;
+}
+
+p {
+    font-size: 1.15rem;
+    text-align: justify;
+    margin-bottom: 25px;
+}
+
+.lista-detalles {
+    list-style: none;
+    padding: 0;
+    margin: 30px 0;
+}
+
+.lista-detalles li {
+    background: #fff0f3;
+    margin: 15px 0;
+    padding: 20px;
+    border-radius: 12px;
+    font-style: italic;
+    border-left: 4px solid var(--color-acento);
+    transition: transform 0.3s ease;
+}
+
+.lista-detalles li:hover {
+    transform: translateX(10px);
+}
+
+.cita-final {
+    text-align: center;
+    font-size: 1.5rem;
+    color: var(--color-primario);
+    font-style: italic;
+    margin-top: 60px;
+    padding: 30px;
+    border-top: 2px solid var(--color-fondo);
+    font-weight: bold;
+}
+
+.footer-pagina {
+    padding-bottom: 40px;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #b5b5b5;
+}
+
+/* Ajustes para móviles */
+@media (max-width: 600px) {
+    h1 { font-size: 3rem; }
+    .carta { padding: 30px 20px; }
+    h2 { font-size: 1.8rem; }
+}
